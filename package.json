@@ -1,0 +1,35 @@
+{
+  "name": "await-wrap",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanford/await-wrap.git"
+  },
+  "homepage": "https://github.com/hanford/await-wrap",
+  "bugs": "https://github.com/hanford/await-wrap/issues",
+  "authors": [
+    "Jack Hanford"
+  ],
+  "tags": [
+    "async / await",
+    "promise",
+    "try / catch",
+    "try async",
+    "try",
+    "catch",
+    "callback"
+  ],
+  "keywords": [
+    "async / await",
+    "promise",
+    "try / catch",
+    "try async",
+    "try",
+    "catch",
+    "callback"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
