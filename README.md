@@ -13,12 +13,12 @@ const iReject = async (text) => new Promise((_, fail) => fail(text))
 ..
 
 const [data, err] = await wrap(iResolve('jack'))
-// data === 'jack', err === undefined
+// data === 'jack', err === null
 
 ..
 
 const [data, err] = await wrap(iReject('rejected!'))
-// data === undefined, err === 'rejected!'
+// data === null, err === 'rejected!'
 ```
 
 Questions? Feedback? [Please let me know](https://github.com/hanford/await-wrap/issues/new)
