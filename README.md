@@ -1,8 +1,9 @@
 # await-wrap
 
-Small async/await wrapper which allows a similar paradigm to Node callback's. `await-wrap` wraps any async function and respond with an object with either `data` or `err`, allowing you to use async/await with out the try/catch blocks.
+Small async/await wrapper which allows a similar paradigm to Node's callbacks mixed with [React Hooks](https://reactjs.org/docs/hooks-intro.html). `await-wrap` wraps any async function and respond with an array with either `data` or `err`, allowing you to use async/await with out the try/catch blocks.
 
 ## Usage
+
 ```js
 const wrap = require('await-wrap')
 
@@ -11,12 +12,12 @@ const iReject = async (text) => new Promise((_, fail) => fail(text))
 
 ..
 
-const { err, data } = await wrap(iResolve('jack'))
+const [data, err] = await wrap(iResolve('jack'))
 // data === 'jack', err === undefined
 
 ..
 
-const { err, data } = await wrap(iReject('rejected!'))
+const [data, err] = await wrap(iReject('rejected!'))
 // data === undefined, err === 'rejected!'
 ```
 
@@ -36,6 +37,7 @@ WWWWWW||WWWWWW
         _||_|| _||_||
        (__|__|(__|__|
 ```
+
 Copyright © 2017-present [Jack Hanford](http://jackhanford.com) jackhanford@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
